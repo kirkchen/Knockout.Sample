@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{E418E024-15D6-4A1C-B7DC-5FBADCFACD23}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\App\Extension\customBinding.ts" />
+    <TypeScriptCompile Include="Scripts\App\ViewModel\Mapping\Mappings.ts" />
+    <Content Include="Scripts\App\Extension\customBinding.js">
+      <DependentUpon>customBinding.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\App\Extension\customBinding.min.js">
+      <DependentUpon>customBinding.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\App\ViewModel\Mapping\Mappings.js">
+      <DependentUpon>Mappings.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\App\ViewModel\Mapping\Mappings.min.js">
+      <DependentUpon>Mappings.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\App\ViewModel\TreenodeSampleViewModel.js">
+      <DependentUpon>TreenodeSampleViewModel.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\App\ViewModel\TreenodeSampleViewModel.min.js">
+      <DependentUpon>TreenodeSampleViewModel.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\knockout.mapping-latest.debug.js" />
+    <Content Include="Scripts\knockout.mapping-latest.js" />
+    <Content Include="Scripts\App\ViewModel\Mapping\Mappings.js.map">
+      <DependentUpon>Mappings.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\App\ViewModel\TreenodeSampleViewModel.js.map">
+      <DependentUpon>TreenodeSampleViewModel.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\App\Extension\customBinding.js.map">
+      <DependentUpon>customBinding.ts</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\knockout-2.2.1.debug.js" />
+    <Content Include="Scripts\knockout-2.2.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <TypeScriptCompile Include="Scripts\App\ViewModel\TreenodeSampleViewModel.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\Lib\jasmine.d.ts" />
+    <Content Include="Scripts\Lib\jquery.d.ts" />
+    <Content Include="Scripts\Lib\knockout.d.ts" />
+    <Content Include="Scripts\Lib\knockout.mapping.d.ts" />
+    <Content Include="TreenodeSample.htm" />
+    <Content Include="web.config" />
+    <Content Include="packages.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>KnockoutCategorySample</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:19134/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES3</TypeScriptTarget>
+    <TypeScriptIncludeComments>true</TypeScriptIncludeComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptTarget>ES3</TypeScriptTarget>
+    <TypeScriptIncludeComments>false</TypeScriptIncludeComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" />
+</Project>
