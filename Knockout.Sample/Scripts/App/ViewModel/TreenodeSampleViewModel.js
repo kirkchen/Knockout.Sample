@@ -23,4 +23,3 @@ var App;
     })(App.ViewModel || (App.ViewModel = {}));
     var ViewModel = App.ViewModel;
 })(App || (App = {}));
-//@ sourceMappingURL=TreenodeSampleViewModel.js.map

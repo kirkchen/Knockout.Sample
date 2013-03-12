@@ -1,18 +1,18 @@
-declare var ko;
+/// <reference path="../../Lib/knockout.d.ts" />
 
 module App.ViewModel {
     export interface ITreeNode {
-        childNodeVisible: any;
+        childNodeVisible: KnockoutObservableBool;
 
         childNodes: ITreeNode[];
     }
 
     export class Category implements ITreeNode {
-        id: number;
+        id: KnockoutObservableNumber;
 
-        name: string;
+        name: KnockoutObservableString;
 
-        childNodeVisible: any;
+        childNodeVisible: KnockoutObservableBool;
 
         childNodes: Category[];
 
