@@ -3,8 +3,9 @@ Here are some real world example develop by knockout.js and TypeScript.
 
 ### Reference ###
 
-TypeScript: http://www.typescriptlang.org/
-Knockout.js: http://knockoutjs.com/
+
+- TypeScript: http://www.typescriptlang.org/
+- Knockout.js: http://knockoutjs.com/
 
 ### Sample Description ###
 
